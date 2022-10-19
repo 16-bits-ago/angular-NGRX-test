@@ -15,6 +15,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatIconModule} from '@angular/material/icon';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,7 @@ import {MatIconModule} from '@angular/material/icon';
     AppRoutingModule,
     StoreModule.forRoot({ count: counterReducer }),
     BrowserAnimationsModule,
-    /* StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }), */
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     /* EffectsModule.forRoot([]), */
     /* StoreRouterConnectingModule.forRoot() */
     MatButtonModule,

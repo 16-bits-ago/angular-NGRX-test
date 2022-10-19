@@ -10,16 +10,22 @@
     ">
     <div style="
         display: flex; 
-        justify-content: center; 
+        flex-direction: column;
+        justify-content: space-around; 
         align-items: center; 
         width: 100%;
-        height: 50px;
+        height: 100px;
         ">
         <div style="display: flex; align-items: center; width:100px; justify-content: space-between; ">
             <span style="font-weight: bold;">Current Count:</span>
             <span matBadge="{{ count$ | async }}" matBadgeOverlap="false"></span>
         </div>
-
+        <div style="display: flex; align-items: center; width:200px; justify-content: space-between; ">
+            <span style="font-weight: bold;">Updated at:</span>
+            <div style="display: flex; flex-direction: column; justify-content: center; width: 100px;">
+                <span style="text-align: center; border-radius: 20px; border: 1px solid blue;">{{324234234234 | date: 'dd-MM-yyyy hh:mm:ss'}}</span>
+            </div>
+        </div>
     </div>
     <mat-progress-bar mode="buffer"></mat-progress-bar>
     <div style="display: flex; justify-content: space-around; width: 100%; margin: 20px 0;">
@@ -29,11 +35,12 @@
     <button style="
         margin: 0 0 20px; 
         padding: 0 50px;" mat-flat-button color="warn" (click)="reset()"
+        *ngIf="((count$ | async) || 0) !== 0; else toast"
     >
         Reset Counter
     </button>
     
 <ng-template #toast>
-    <div>Loading...</div>
+    <div style="font-weight: bold; margin-bottom: 20px;">U must start to count before RESET</div>
    </ng-template>
 </div>
