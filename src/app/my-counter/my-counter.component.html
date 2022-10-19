@@ -1,0 +1,39 @@
+<div style="
+    margin-top: 30px;
+    width: 300px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid blue;
+    ">
+    <div style="
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        width: 100%;
+        height: 50px;
+        ">
+        <div style="display: flex; align-items: center; width:100px; justify-content: space-between; ">
+            <span style="font-weight: bold;">Current Count:</span>
+            <span matBadge="{{ count$ | async }}" matBadgeOverlap="false"></span>
+        </div>
+
+    </div>
+    <mat-progress-bar mode="buffer"></mat-progress-bar>
+    <div style="display: flex; justify-content: space-around; width: 100%; margin: 20px 0;">
+        <button mat-flat-button color="primary" (click)="increment()">Increment</button>
+        <button mat-flat-button color="accent" (click)="decrement()">Decrement</button>
+    </div>
+    <button style="
+        margin: 0 0 20px; 
+        padding: 0 50px;" mat-flat-button color="warn" (click)="reset()"
+    >
+        Reset Counter
+    </button>
+    
+<ng-template #toast>
+    <div>Loading...</div>
+   </ng-template>
+</div>
