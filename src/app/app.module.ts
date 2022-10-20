@@ -17,6 +17,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatIconModule} from '@angular/material/icon';
 import { MoviesPageComponent } from './my-movies/my-movies.component';
 import { HttpClientModule } from '@angular/common/http';
+import { movieReducer } from './movie.reducer';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({ count: counterReducer, updatedAt: counterDateReducer }),
+    StoreModule.forRoot({ count: counterReducer, updatedAt: counterDateReducer, movies: movieReducer }),
     BrowserAnimationsModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     /* EffectsModule.forRoot([]), */

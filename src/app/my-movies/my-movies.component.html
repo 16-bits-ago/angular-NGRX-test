@@ -1,9 +1,11 @@
+<!-- <button (click)="listOfMovies()">asdfasdf</button> -->
 <div style="
     border-radius: 20px; 
     border: 1px solid blue; 
     padding: 20px; 
     margin: 20px 0;">
+    
     <li *ngFor="let movie of movies">
-        {{ movie.title }}
+        {{ movie.title + ' ' + movie.id + ' ' + movie.type }}
     </li>
 </div>
