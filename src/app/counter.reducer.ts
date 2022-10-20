@@ -1,8 +1,8 @@
 
 import { createReducer, on } from '@ngrx/store';
-import { increment, decrement, reset } from './counter.action';
+import { increment, decrement, reset, currentDate } from './counter.action';
 
-/* export interface CountState {
+export interface CountState {
   count: number,
   upadateAt: number
 };
@@ -10,13 +10,16 @@ import { increment, decrement, reset } from './counter.action';
 export const initialState: CountState = {
   count: 0,
   upadateAt: Date.now()
-}; */
-
-export const initialState = 0;
+};
 
 export const counterReducer = createReducer(
-  initialState,
+  initialState.count,
   on(increment, (state) => state + 1),
   on(decrement, (state) => state - 1),
-  on(reset, (state) => 0)
+  on(reset, (state) =>  state = 0)
+);
+
+export const counterDateReducer = createReducer(
+  initialState.upadateAt,
+  on(currentDate, (state) => state = Date.now())
 );
