@@ -18,6 +18,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { MoviesPageComponent } from './my-movies/my-movies.component';
 import { HttpClientModule } from '@angular/common/http';
 import { movieReducer } from './movie.reducer';
+import { MovieEffects } from './my-movies/movie.effect';
 
 @NgModule({
   declarations: [
@@ -28,10 +29,10 @@ import { movieReducer } from './movie.reducer';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({ count: counterReducer, updatedAt: counterDateReducer, movies: movieReducer }),
+    StoreModule.forRoot({ count: counterReducer, updatedAt: counterDateReducer, articleState: movieReducer }),
     BrowserAnimationsModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    /* EffectsModule.forRoot([]), */
+    EffectsModule.forRoot([MovieEffects]),
     /* StoreRouterConnectingModule.forRoot() */
     MatButtonModule,
     MatProgressBarModule,

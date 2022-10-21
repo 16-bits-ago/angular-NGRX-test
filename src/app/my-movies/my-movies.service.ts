@@ -1,13 +1,8 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
+import { IMovie } from '../statesTypes/movie.type';
 
-export interface IMovie {
-    id: number;
-    title: string;
-    price: number;
-    type: string;
-    image: string;
-}
+
 
 @Injectable({
   providedIn: 'root'

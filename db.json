@@ -1,10 +1,12 @@
 {
     "movies": [
-      { "id": 1, "title": "Interstellar", "price": 200, "type": "burger", "image": "https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4135.png" },
-      { "id": 2, "title": "Smile", "price": 130, "type": "burger", "image": "https://www.pngmart.com/files/16/Classic-Cheese-Burger-PNG-Photos.png" },
-      { "id": 3, "title": "One plus One", "price": 110, "type": "burger", "image": "https://www.pngkey.com/png/full/168-1682325_for-a-limited-time-your-favourite-burger-the.png" },
-      { "id": 4, "title": "Marsianin", "price": 50, "type": "burger", "image": "https://www.pngmart.com/files/16/Double-Cheese-Burger-PNG-Image.png" },
-      { "id": 5, "title": "Visitors", "price": 170, "type": "taco", "image": "https://oldelpasoarabia.com/img/triple_threat_steakhouse_tacos.png" },
-      { "id": 6, "title": "Ace Ventura", "price": 500, "type": "chicken", "image": "https://toppng.com/uploads/preview/fried-chicken-png-fried-full-chicken-115636498664i2qwqypi5.png" }
+      { "id": 1, "title": "Interstellar", "price": 200, "type": "horror", "image": "https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4135.png" },
+      { "id": 2, "title": "Smile", "price": 130, "type": "fantasy", "image": "https://www.pngmart.com/files/16/Classic-Cheese-Burger-PNG-Photos.png" },
+      { "id": 3, "title": "One plus One", "price": 110, "type": "detective", "image": "https://www.pngkey.com/png/full/168-1682325_for-a-limited-time-your-favourite-burger-the.png" },
+      { "id": 4, "title": "Marsianin", "price": 50, "type": "horror", "image": "https://www.pngmart.com/files/16/Double-Cheese-Burger-PNG-Image.png" },
+      { "id": 5, "title": "Visitors", "price": 170, "type": "fantasy", "image": "https://oldelpasoarabia.com/img/triple_threat_steakhouse_tacos.png" },
+      { "id": 6, "title": "Ace Ventura", "price": 500, "type": "horror", "image": "https://toppng.com/uploads/preview/fried-chicken-png-fried-full-chicken-115636498664i2qwqypi5.png" },
+      { "id": 7, "title": "Ace Ventura", "price": 500, "type": "detective", "image": "https://toppng.com/uploads/preview/fried-chicken-png-fried-full-chicken-115636498664i2qwqypi5.png" },
+      { "id": 8, "title": "Visitors", "price": 170, "type": "detective", "image": "https://oldelpasoarabia.com/img/triple_threat_steakhouse_tacos.png" }
     ]
 }

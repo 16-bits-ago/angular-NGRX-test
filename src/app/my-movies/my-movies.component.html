@@ -1,11 +1,22 @@
-<!-- <button (click)="listOfMovies()">asdfasdf</button> -->
 <div style="
     border-radius: 20px; 
     border: 1px solid blue; 
     padding: 20px; 
-    margin: 20px 0;">
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    ">
+    <span style="font-weight: bold; margin-bottom: 10px;">Status of loading Film <br/> List: 
+        <span style="color: green;">{{msg$ | async}}</span>
+    </span>
+    <div>
+        <li *ngFor="let movie of movies$ | async">
+            <span style="font-weight: bold;">{{movie.title}}</span>
+            {{ movie.id + ' ' + movie.type }}
+        </li>
+    </div>
+    <button mat-stroked-button color="primary" style="margin: 10px 0;" (click)="loadAllArticles()">Reset All Articles</button>
     
-    <li *ngFor="let movie of movies">
-        {{ movie.title + ' ' + movie.id + ' ' + movie.type }}
-    </li>
 </div>
